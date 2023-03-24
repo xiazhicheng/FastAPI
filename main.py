@@ -8,8 +8,8 @@ class Msg(BaseModel):
 
 
 @app.get("/")
-async def root():
-    return {"message": "Hello World. Welcome to FastAPI!"}
+async def main():
+    return {"message": "Hello World. Welcome to 土豆他爹!"}
 
 
 @app.get("/path")

@@ -4,7 +4,7 @@ from fastapi.responses import FileResponse
 import uvicorn
 import traceback
 from loguru import logger
-
+import pendulum
 app = FastAPI()
 
 class Msg(BaseModel):
@@ -13,7 +13,8 @@ class Msg(BaseModel):
 
 @app.get("/")
 async def main():
-    return {"message": "Hello World. Welcome to 土豆家!"}
+    now = pendulum.now().format('YYYY-MM-DD HH:mm:ss')
+    return {"message": f"Hello {now}. Welcome to 土豆家!"}
 
 
 @app.get("/path")

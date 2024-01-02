@@ -13,7 +13,7 @@ class Msg(BaseModel):
 
 @app.get("/")
 async def main():
-    now = pendulum.now(tz='Asia/ShangHai').format('YYYY-MM-DD HH:mm:ss')
+    now = pendulum.now().format('YYYY-MM-DD HH:mm:ss')
     return {"message": f"Hello {now}. Welcome to 土豆家!"}
 
 

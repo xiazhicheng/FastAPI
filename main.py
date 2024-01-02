@@ -38,7 +38,7 @@ async def demo_get_path_id(path_id: int):
 
 if __name__ == '__main__':
     try:
-        uvicorn.run(app=app, host="0.0.0.0", port=8096)
+        uvicorn.run(app=app, host="0.0.0.0", port=80)
     except Exception as e:
         logger.error(traceback.format_exc())
         raise e
